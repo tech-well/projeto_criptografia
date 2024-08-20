@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Vogais</title>
+</head>
+<body>
+    <h2>Troque as Vogais da Palavra</h2>
+
+    <!-- Campo de entrada onde o usuário digita a palavra -->
+    <input type="text" id="inputPalavra" placeholder="Digite uma palavra">
+
+    <!-- Exibe o resultado -->
+    <p>Palavra Modificada: <span id="resultado"></span></p>
+
+    <script>
+        function substituirVogais(palavra) {
+            palavra = palavra.replace(/a/g, 'ai');
+            palavra = palavra.replace(/e/g, 'enter');
+            palavra = palavra.replace(/i/g, 'imes');
+            palavra = palavra.replace(/o/g, 'ober');
+            palavra = palavra.replace(/u/g, 'ufat');
+            return palavra;
+        }
+
+        // Capturando o campo de entrada e o campo de exibição do resultado
+        const inputPalavra = document.getElementById('inputPalavra');
+        const resultado = document.getElementById('resultado');
+
+        // Adicionando um evento para capturar cada vez que o usuário digitar algo
+        inputPalavra.addEventListener('input', function() {
+            const palavraOriginal = inputPalavra.value;
+            const palavraModificada = substituirVogais(palavraOriginal);
+            resultado.textContent = palavraModificada;
+        });
+    </script>
+</body>
+</html>
