@@ -15,20 +15,25 @@
         <section class="container">
 
             <div class="container__box-2">
-               
+
                 <input onclick="peganome()" type="text" id="input__texto" placeholder="digite uma palavra">
                 <div class="container__botoes">
                     <button onclick="criptografar()">criptografar</button>
-                    <button>descriptografar</button>
+                    <button onclick="descriptografar()">descriptografar</button>
                 </div>
-            
+
 
             </div>
 
             <div class="container__box">
                 <P class="mostrarTexto"></P>
 
-                <button class="copiar" onclick="copiar()">copiar</button>
+
+                <div class="copiar">
+                    <h1 class="copiar__h1">Nenhuma mensagem encontrada</h1>
+                    <p class="copiar__p">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    <button class="copiar__click" onclick="copiar()">copiar</button>
+                </div>
             </div>
 
         </section>
